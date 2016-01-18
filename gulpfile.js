@@ -61,13 +61,6 @@ gulp.task('lint', () => {
 });
 
 
-// gulp.task('serve', done => {
-//   config.browserSync.server.middleware = [historyApi()];
-//   browserSync.create()
-//     .init(config.browserSync, done);
-// });
-
-
 gulp.task('serve.dev', done => {
   let conf = require(config.webpack.dev);
   let compiler = webpack(conf);
