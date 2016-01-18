@@ -11,7 +11,7 @@ import { Component } from 'angular2/core';
       <section class="row">
         <p>Your Stuff Here <small>The only limit is <em>your imagination!</em></small></p>
         <div class="alert alert-danger">
-            Now Get Busy!
+            Now Get Busy! Is this thing on?
         </div>
       </section>
     </div>

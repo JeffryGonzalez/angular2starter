@@ -1,6 +1,5 @@
 'use strict';
 
-const browserSync   = require('browser-sync');
 const del           = require('del');
 const gulp          = require('gulp');
 const gutil         = require('gulp-util');
@@ -27,17 +26,7 @@ const paths = {
 //  CONFIG
 //---------------------------------------------------------
 const config = {
-  browserSync: {
-    files: [paths.target + '/**/*'],
-    notify: false,
-    open: false,
-    port: 3000,
-    reloadDelay: 500,
-    server: {
-      baseDir: paths.target
-    }
-  },
-
+ 
   karma: {
     configFile: __dirname + '/karma.conf.js'
   },
@@ -72,11 +61,11 @@ gulp.task('lint', () => {
 });
 
 
-gulp.task('serve', done => {
-  config.browserSync.server.middleware = [historyApi()];
-  browserSync.create()
-    .init(config.browserSync, done);
-});
+// gulp.task('serve', done => {
+//   config.browserSync.server.middleware = [historyApi()];
+//   browserSync.create()
+//     .init(config.browserSync, done);
+// });
 
 
 gulp.task('serve.dev', done => {
